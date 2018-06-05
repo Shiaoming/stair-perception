@@ -3,6 +3,8 @@
 
 This is a stair perception kit programming with PCL and Qt. It can model the stair and measure the stair's height, width, steps and so on. Tht input data can either be Kinect V2 video stream or saved images and point clouds from disk.
 
+![screenshot](https://raw.githubusercontent.com/Psunshine/stair-perception/master/screenshot.png)
+
 My algorithm is far from perfect and not stable in some conditions. I will be very glad that if you can push to improve it. :)
 
 # Dependencies
