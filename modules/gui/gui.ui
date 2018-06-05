@@ -1,0 +1,2832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>gui</class>
+ <widget class="QMainWindow" name="gui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1497</width>
+    <height>881</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>5000</width>
+    <height>5000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Stair Perception BUAA</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0" rowspan="2" colspan="3">
+     <widget class="QVTKWidget" name="qvtkwidget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>300</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QWidget" name="widget_image" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>256</width>
+        <height>212</height>
+       </size>
+      </property>
+      <widget class="QLabel" name="image_depth_label">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>256</width>
+         <height>212</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>256</width>
+         <height>212</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>depth image</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="image_color_label">
+       <property name="geometry">
+        <rect>
+         <x>256</x>
+         <y>0</y>
+         <width>256</width>
+         <height>212</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>color image</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="text">
+         <string>x_limit_min:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QDoubleSpinBox" name="x_min_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="prefix">
+         <string/>
+        </property>
+        <property name="minimum">
+         <double>-5.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QSlider" name="x_min_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="label_19">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane segmentation parameters</string>
+        </property>
+        <property name="text">
+         <string>seg_plane_angle_diff:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QDoubleSpinBox" name="seg_plane_angle_diff_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane segmentation parameters</string>
+        </property>
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>45.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QSlider" name="seg_plane_angle_diff_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane segmentation parameters</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>4500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="text">
+         <string>x_limit_max:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QDoubleSpinBox" name="x_max_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="maximum">
+         <double>5.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QSlider" name="x_max_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_20">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane merge parameters</string>
+        </property>
+        <property name="text">
+         <string>merge_threshold:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QDoubleSpinBox" name="merge_threshold_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane merge parameters</string>
+        </property>
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.200000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QSlider" name="merge_threshold_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane merge parameters</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>20</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="text">
+         <string>y_limit_min:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QDoubleSpinBox" name="y_min_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="prefix">
+         <string/>
+        </property>
+        <property name="minimum">
+         <double>-5.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QSlider" name="y_min_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="label_39">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane merge parameters</string>
+        </property>
+        <property name="text">
+         <string>merge_angle_diff:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QDoubleSpinBox" name="merge_angle_diff_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane merge parameters</string>
+        </property>
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>45.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QSlider" name="merge_angle_diff_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane merge parameters</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>4500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="text">
+         <string>y_limit_max:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QDoubleSpinBox" name="y_max_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="maximum">
+         <double>5.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QSlider" name="y_max_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLabel" name="label_40">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>min number of points of final planes</string>
+        </property>
+        <property name="text">
+         <string>min_num_points:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QSpinBox" name="min_num_points_spinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>min number of points of final planes</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5">
+       <widget class="QSlider" name="min_num_points_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>min number of points of final planes</string>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="text">
+         <string>z_limit_min:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QDoubleSpinBox" name="z_min_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="prefix">
+         <string/>
+        </property>
+        <property name="minimum">
+         <double>-5.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QSlider" name="z_min_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLabel" name="label_41">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="text">
+         <string>min_length:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4">
+       <widget class="QDoubleSpinBox" name="min_length_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="maximum">
+         <double>0.500000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="5">
+       <widget class="QSlider" name="min_length_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="maximum">
+         <number>50</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="text">
+         <string>z_limit_max:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QDoubleSpinBox" name="z_max_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="maximum">
+         <double>5.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QSlider" name="z_max_horizontalSlider">
+        <property name="minimumSize">
+         <size>
+          <width>124</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>passthrough parameters</string>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QLabel" name="label_42">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="text">
+         <string>max_length:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="4">
+       <widget class="QDoubleSpinBox" name="max_length_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="minimum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>2.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="5">
+       <widget class="QSlider" name="max_length_horizontalSlider">
+        <property name="minimumSize">
+         <size>
+          <width>124</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>200</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>the number of points normals computed based on</string>
+        </property>
+        <property name="text">
+         <string>normal_compute_points:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QSpinBox" name="normal_compute_points_spinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>the number of points normals computed based on</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>250</number>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QSlider" name="normal_compute_points_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>the number of points normals computed based on</string>
+        </property>
+        <property name="maximum">
+         <number>250</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="3">
+       <widget class="QLabel" name="label_43">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="text">
+         <string>min_width:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="4">
+       <widget class="QDoubleSpinBox" name="min_width_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="maximum">
+         <double>0.200000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="5">
+       <widget class="QSlider" name="min_width_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="maximum">
+         <number>20</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="label_10">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>voxel_x:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QDoubleSpinBox" name="voxel_x_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.100000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="2">
+       <widget class="QSlider" name="voxel_x_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="3">
+       <widget class="QLabel" name="label_44">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="text">
+         <string>max_width:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="4">
+       <widget class="QDoubleSpinBox" name="max_width_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="minimum">
+         <double>0.200000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.500000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="5">
+       <widget class="QSlider" name="max_width_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane length and width constraint</string>
+        </property>
+        <property name="maximum">
+         <number>30</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="label_11">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>voxel_y:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QDoubleSpinBox" name="voxel_y_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.100000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="2">
+       <widget class="QSlider" name="voxel_y_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="3">
+       <widget class="QLabel" name="label_45">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>max ground height</string>
+        </property>
+        <property name="text">
+         <string>max_g_height:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="4">
+       <widget class="QDoubleSpinBox" name="max_g_height_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>max ground height</string>
+        </property>
+        <property name="minimum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.200000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="5">
+       <widget class="QSlider" name="max_g_height_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>max ground height</string>
+        </property>
+        <property name="maximum">
+         <number>20</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="label_12">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>voxel_z:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QDoubleSpinBox" name="voxel_z_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.100000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="2">
+       <widget class="QSlider" name="voxel_z_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="3">
+       <widget class="QLabel" name="label_46">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>max distance of horizontal plane counter points</string>
+        </property>
+        <property name="text">
+         <string>counter_max_distance:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="4">
+       <widget class="QDoubleSpinBox" name="counter_max_distance_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>max distance of horizontal plane counter points</string>
+        </property>
+        <property name="minimum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.500000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="5">
+       <widget class="QSlider" name="counter_max_distance_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>max distance of horizontal plane counter points</string>
+        </property>
+        <property name="maximum">
+         <number>50</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="label_21">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>remove points too close to origin</string>
+        </property>
+        <property name="text">
+         <string>close th:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="1">
+       <widget class="QDoubleSpinBox" name="noleg_distance_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>remove points too close to origin</string>
+        </property>
+        <property name="minimum">
+         <double>0.100000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="2">
+       <widget class="QSlider" name="noleg_distance_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>remove points too close to origin</string>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="3">
+       <widget class="QLabel" name="label_47">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>step height constraint </string>
+        </property>
+        <property name="text">
+         <string>min_height:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="4">
+       <widget class="QDoubleSpinBox" name="min_height_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>step height constraint </string>
+        </property>
+        <property name="minimum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.200000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="5">
+       <widget class="QSlider" name="min_height_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>step height constraint </string>
+        </property>
+        <property name="maximum">
+         <number>20</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLabel" name="label_13">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>extract perpendicular plane parameters</string>
+        </property>
+        <property name="text">
+         <string>parallel angle diff:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="1">
+       <widget class="QSpinBox" name="parallel_angle_diff_spinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>extract perpendicular plane parameters</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>45</number>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="2">
+       <widget class="QSlider" name="parallel_angle_diff_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>extract perpendicular plane parameters</string>
+        </property>
+        <property name="maximum">
+         <number>45</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="3">
+       <widget class="QLabel" name="label_48">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>step height constraint </string>
+        </property>
+        <property name="text">
+         <string>max_height:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="4">
+       <widget class="QDoubleSpinBox" name="max_height_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>step height constraint </string>
+        </property>
+        <property name="minimum">
+         <double>0.100000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.300000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="5">
+       <widget class="QSlider" name="max_height_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>step height constraint </string>
+        </property>
+        <property name="maximum">
+         <number>20</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QLabel" name="label_14">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>extract perpendicular plane parameters</string>
+        </property>
+        <property name="text">
+         <string>perpendicular angle diff:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="1">
+       <widget class="QSpinBox" name="perpendicular_angle_diff_spinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>extract perpendicular plane parameters</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>45</number>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="2">
+       <widget class="QSlider" name="perpendicular_angle_diff_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>extract perpendicular plane parameters</string>
+        </property>
+        <property name="maximum">
+         <number>45</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="3">
+       <widget class="QLabel" name="label_49">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="text">
+         <string>vertical_angle_diff:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="4">
+       <widget class="QDoubleSpinBox" name="vertical_angle_diff_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="minimum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>45.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="5">
+       <widget class="QSlider" name="vertical_angle_diff_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="maximum">
+         <number>4500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0">
+       <widget class="QLabel" name="label_15">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>find cluster parameters</string>
+        </property>
+        <property name="text">
+         <string>cluster_tolerance:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="1">
+       <widget class="QDoubleSpinBox" name="cluster_tolerance_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>find cluster parameters</string>
+        </property>
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.500000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="2">
+       <widget class="QSlider" name="cluster_tolerance_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>find cluster parameters</string>
+        </property>
+        <property name="maximum">
+         <number>50</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="3">
+       <widget class="QLabel" name="label_50">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="text">
+         <string>mcv_angle_diff:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="4">
+       <widget class="QDoubleSpinBox" name="mcv_angle_diff_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="minimum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="5">
+       <widget class="QSlider" name="mcv_angle_diff_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="maximum">
+         <number>9000</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0">
+       <widget class="QLabel" name="label_16">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>find cluster parameters</string>
+        </property>
+        <property name="text">
+         <string>min_cluster_size:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="1">
+       <widget class="QSpinBox" name="min_cluster_size_spinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>find cluster parameters</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="2">
+       <widget class="QSlider" name="min_cluster_size_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>find cluster parameters</string>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="3">
+       <widget class="QLabel" name="label_51">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="text">
+         <string>center_vector_angle_diff:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="4">
+       <widget class="QDoubleSpinBox" name="center_vector_angle_diff_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="minimum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="5">
+       <widget class="QSlider" name="center_vector_angle_diff_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="maximum">
+         <number>9000</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="0">
+       <widget class="QLabel" name="label_17">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane segmentation parameters</string>
+        </property>
+        <property name="text">
+         <string>seg_threshold:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="1">
+       <widget class="QDoubleSpinBox" name="seg_threshold_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane segmentation parameters</string>
+        </property>
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.200000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="2">
+       <widget class="QSlider" name="seg_threshold_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane segmentation parameters</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>20</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="3">
+       <widget class="QLabel" name="label_52">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="text">
+         <string>vertical_plane_angle_diff:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="4">
+       <widget class="QDoubleSpinBox" name="vertical_plane_angle_diff_doubleSpinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="minimum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>45.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="5">
+       <widget class="QSlider" name="vertical_plane_angle_diff_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>direction threshold</string>
+        </property>
+        <property name="maximum">
+         <number>450</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="0">
+       <widget class="QLabel" name="label_18">
+        <property name="maximumSize">
+         <size>
+          <width>176</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane segmentation parameters</string>
+        </property>
+        <property name="text">
+         <string>seg_rest_point:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="1">
+       <widget class="QSpinBox" name="seg_rest_point_spinBox">
+        <property name="maximumSize">
+         <size>
+          <width>73</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane segmentation parameters</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="2">
+       <widget class="QSlider" name="seg_rest_point_horizontalSlider">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>15</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>plane segmentation parameters</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="mode_horizontalLayout">
+      <item>
+       <widget class="QRadioButton" name="mode_files_radioButton">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>27</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>read files</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">mode_buttonGroup</string>
+        </attribute>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="mode_kinect_radioButton">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>27</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>read kinect</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">mode_buttonGroup</string>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="maximumSize">
+         <size>
+          <width>97</width>
+          <height>29</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>IMU:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="IMU_Serial_lineEdit">
+        <property name="maximumSize">
+         <size>
+          <width>193</width>
+          <height>29</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>/dev/ttyUSB0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="maximumSize">
+         <size>
+          <width>116</width>
+          <height>29</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Robot:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="robot_serial_lineEdit">
+        <property name="maximumSize">
+         <size>
+          <width>193</width>
+          <height>29</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>/dev/ttyUSB1</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="3" rowspan="2">
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QCheckBox" name="original_cloud_checkBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>original cloud</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="range_checkBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>range limited cloud</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="voxel_checkBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>voxel cloud</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="noleg_checkBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>remove too close point</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="vertical_cloud_checkBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>vertical cloud</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="horizontal_cloud_checkBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>horizontal cloud</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QCheckBox" name="seg_h_p_checkBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>seg horizontal planes</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="seg_v_pcheckBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>seg vertical planes</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="merge_h_p_checkBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>merge horizontal planes</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="merge_v_pcheckBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>merge vertical planes</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="stair_checkBox">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>stair model</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">show_buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="stop_pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>126</height>
+         </size>
+        </property>
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>212</red>
+              <green>141</green>
+              <blue>212</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>212</red>
+              <green>141</green>
+              <blue>212</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>212</red>
+              <green>141</green>
+              <blue>212</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
+        <property name="text">
+         <string>Pause</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="start_pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>126</height>
+         </size>
+        </property>
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>212</red>
+              <green>141</green>
+              <blue>212</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>212</red>
+              <green>141</green>
+              <blue>212</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>212</red>
+              <green>141</green>
+              <blue>212</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
+        <property name="text">
+         <string>Continue</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="img_path_pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>126</height>
+         </size>
+        </property>
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
+        <property name="text">
+         <string>Set file path</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="save_img_pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>126</height>
+         </size>
+        </property>
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
+        <property name="text">
+         <string>Save cloud</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="2">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="open_param_pushButton">
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
+        <property name="text">
+         <string>open param</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="save_param_pushButton">
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>85</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
+        <property name="text">
+         <string>save param</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0" colspan="4">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="find_stair_label">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>No Stair</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="height_label">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>height:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="width_label">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>width:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="v_height_label">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>v_height:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="v_depth_label">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>v_depth:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="yaw_label">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>yaw:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="pitch_label">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>pitch:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="roll_label">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>roll:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="time_label">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>time:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="mode_buttonGroup"/>
+  <buttongroup name="show_buttonGroup"/>
+ </buttongroups>
+</ui>
