@@ -5,7 +5,10 @@ This is a stair perception kit programming with PCL and Qt. It can model the sta
 
 ![screenshot](https://raw.githubusercontent.com/Psunshine/stair-perception/master/pic/screenshot.png)
 
-![stairmodel](https://raw.githubusercontent.com/Psunshine/stair-perception/master/pic/stairmodel.png)
+<div  align="center">    
+<img src="https://raw.githubusercontent.com/Psunshine/stair-perception/master/pic/stairmodel.png" width = "350" alt="stairmodel" align=center />
+</div>
+
 
 For more details about this algorithm, please refer to paper **Real-Time Stairs Geometric Parameters Estimation for Lower Limb Rehabilitation Exoskeleton** on *30th Chinese Control and Decision Conference (2018 CCDC)*.
 
