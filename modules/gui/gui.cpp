@@ -7,7 +7,7 @@ gui::gui(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::gui)
 {
-    img_path = "../images";
+    img_path = "../samples";
     param_file = tr("../param.yaml");
     run_mode = files_mode;
     show_mode = original;
