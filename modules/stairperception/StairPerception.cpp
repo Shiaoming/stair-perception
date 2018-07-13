@@ -261,6 +261,34 @@ void StairDetection::printStairModel(Stair &stair)
     }
 }
 
+
+void StairDetection::printStairEstParam(Stair &stair)
+{
+    Node* pnext;
+    pnext = stair.getHead();
+
+    std::cout << GREEN << "Stair Model:" << RESET << std::endl;
+    std::cout << "Height\t\tDepth\tV_Height\tV_Depth" << std::endl;
+    while(true)
+    {
+        if(pnext->pnext_type == step_point)
+        {
+            Step *pstep = (Step*)(pnext->pnext);
+            std::cout << pstep->height << "\t" << pstep->depth <<"\t" << pstep->line.h << "\t" << pstep->line.d << std::endl;
+        }
+        else if(pnext->pnext_type == concaveline_point)
+        {
+            ConcaveLine *pline = (ConcaveLine*)(pnext->pnext);
+//            std::cout << pstep->line.h << "\t" << pstep->line.d << std::endl;
+        }
+        else
+        {
+            break;
+        }
+        pnext = pnext->pnext;
+    }
+}
+
 /** \brief rotation clouds
     * \param[in] cloud_in: reference to input cloud
     * \param[in] rotation_matrix: rotation matrix
@@ -2647,6 +2675,10 @@ bool StairDetection::stairModel(std::vector<Plane> &vector_plane_sorted,
             if(prev_concave_line != NULL)
             {
                 pstep->height = fabs(line.h-prev_concave_line->line.h);
+            }else{
+                pcl::PointXYZRGBA point_max,point_min;
+                findMinMaxProjPoint(vector_plane_sorted[index],1,0,0,point_max,point_min);
+                pstep->height = fabs(point_max.x - line.h);
             }
 
             stair.pushBack((Node*)pstep,step_point);
@@ -2723,6 +2755,8 @@ bool StairDetection::stairModel(std::vector<Plane> &vector_plane_sorted,
 
             if(prev_concave_line != NULL)
                 pstep->height = fabs(line2.h-prev_concave_line->line.h);
+            else
+                pstep->height = fabs(vector_plane_sorted[index].center.x - vector_plane_sorted[index_next].center.x);
 
             stair.pushBack((Node*)pstep,step_point);
 

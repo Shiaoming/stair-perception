@@ -136,6 +136,8 @@ public:
      */
     void printStairModel(Stair &stair);
 
+    void printStairEstParam(Stair &stair);
+
     // StairDetection():x_min(0.55),x_max(1.5),y_limit_min(0),y_max(1),
     //      z_min(-0.5),z_max(0.5),normal_compute_points(70),seg_rest_point(0.1),
     //      file_name("./time.txt")

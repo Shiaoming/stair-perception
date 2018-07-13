@@ -17,16 +17,16 @@ min_cluster_size: 9
 max_cluster_size: 100000
 seg_threshold: 1.0000000000000000e-02
 seg_max_iters: 100
-seg_rest_point: 500
+seg_rest_point: 236
 seg_plane_angle_diff: 7.
 merge_threshold: 2.0000000000000000e-02
 merge_angle_diff: 7.
-min_num_points: 149
+min_num_points: 150
 min_length: 1.4999999999999999e-01
 max_length: 1.
 min_width: 5.0000000000000003e-02
-max_width: 3.4000000000000002e-01
-max_g_height: 6.0000000000000012e-02
+max_width: 3.8000000000000000e-01
+max_g_height: 5.0000000000000012e-02
 counter_max_distance: 2.5000000000000000e-01
 min_height: 5.0000000000000003e-02
 max_height: 2.0000000000000001e-01
@@ -34,4 +34,4 @@ vertical_angle_diff: 20.
 mcv_angle_diff: 80.
 center_vector_angle_diff: 70.
 vertical_plane_angle_diff: 20.
-noleg_distance: 0.
+noleg_distance: 8.1100000000000005e-01

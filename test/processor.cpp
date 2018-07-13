@@ -94,7 +94,7 @@ void DProcessor::resolve_result(Stair stair)
         if(tmp_result.v_height > 700 && tmp_result.v_height < 1150)
             result.v_height = tmp_result.v_height;
 
-        if(tmp_result.v_depth > 250 && tmp_result.v_depth < 600)
+        if(tmp_result.v_depth > 0 && tmp_result.v_depth < 600)
             result.v_depth = tmp_result.v_depth;
 
 //        if (result_count >= 20) result_count = 0;
@@ -254,6 +254,9 @@ void DProcessor::run()
 
         gettimeofday(&tv, nullptr);
         long long time2 = tv.tv_sec * 1000 + tv.tv_usec / 1000;
+
+        if(has_stair)
+            stair_detection.printStairEstParam(stair);
 
         result.has_stair = has_stair;
         result.time = time2 - time1;
