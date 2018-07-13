@@ -268,7 +268,7 @@ void StairDetection::printStairEstParam(Stair &stair)
     pnext = stair.getHead();
 
     std::cout << GREEN << "Stair Model:" << RESET << std::endl;
-    std::cout << "Height\t\tDepth\tV_Height\tV_Depth" << std::endl;
+    std::cout << "Height\t\tDepth\t\tV_Distance\tH_Distance" << std::endl;
     while(true)
     {
         if(pnext->pnext_type == step_point)

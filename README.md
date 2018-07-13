@@ -1,19 +1,24 @@
 
 # Introduction
 
-This is a stair perception kit programming with PCL and Qt. It can model the stair and measure the stair's height, width, steps and so on. Tht input data can either be Kinect V2 video stream or saved images and point clouds from disk.
+This is a stair perception kit programming with PCL and Qt which can model the stair and measure the stair's height, width, steps and so on. Tht input data can either be Kinect V2 video stream or saved images and point clouds from disk.
 
-![screenshot](https://raw.githubusercontent.com/Psunshine/stair-perception/master/pic/screenshot1.png)
-![screenshot](https://raw.githubusercontent.com/Psunshine/stair-perception/master/pic/screenshot2.png)
+You can run it in terminal after build scince some useful information not shown in the gui window is printed. The main window is shown below, as you can seen, the visualization of original image and estimated stair model are included. Of course, for the convenience of tuning parameters, some of them can be adjust in the main window (notice some paramerers are not used at last, please refer to the original code). The status bar show some basic infomation including the fist stair parameters, IMU pose and running time.
+![](https://raw.githubusercontent.com/Psunshine/stair-perception/master/pic/screenshot1.png)
 
+You can get more detail stair information in the terminal output. For example, the staircase shown above have **four** steps, each step's geometric parameters such as height and depth are printed.
 <div  align="center">    
-<img src="https://raw.githubusercontent.com/Psunshine/stair-perception/master/pic/stairmodel.png" width = "350" alt="stairmodel" align=center />
+<img src="https://raw.githubusercontent.com/Psunshine/stair-perception/master/pic/screenshot2.png"  alt="terminal" align=center />
+</div>
+
+The meaning of **H**eight, **D**epth, **V_D**istance and **H_D**istance are shown in the picture below.
+<div  align="center">    
+<img src="https://raw.githubusercontent.com/Psunshine/stair-perception/master/pic/stairmodel.png"  alt="stairmodel" align=center />
 </div>
 
 
 For more details about this algorithm, please refer to paper **Real-Time Stairs Geometric Parameters Estimation for Lower Limb Rehabilitation Exoskeleton** on *30th Chinese Control and Decision Conference (2018 CCDC)*.
 
-My algorithm is far from perfect and not stable in some conditions. I will be very glad that if you can push to improve it. :)
 
 # Dependencies
 

@@ -52,26 +52,11 @@ void DProcessor::resolve_result(Stair stair)
         Node *pnext;
         pnext = stair.getHead();
 
-        std::cout << GREEN << "Stair Model:" << RESET << std::endl;
         while (true)
         {
             if (pnext->pnext_type == step_point)
             {
                 auto *pstep = (Step *) (pnext->pnext);
-//                 std::cout << "[step" << pstep->count << "]:" << std::endl;
-//                 std::cout << "point cloud vertical" << std::endl;
-//                 std::cout << "\tpoints number: " << pstep->plane_v->cloud.points.size()<< std::endl;
-//                 std::cout << "\theight: " << pstep->height << std::endl;
-//                 std::cout << "point cloud horizontal" << std::endl;
-//                 std::cout << "\tpoints number: " << pstep->plane_h->cloud.points.size()<< std::endl;
-//                 std::cout << "\tdepth:  " << pstep->depth << std::endl;
-//                 std::cout << "convex line: " << std::endl;
-//                 std::cout << "\t" << "coeff: ";
-//                 for(size_t i = 0; i < pstep->line.coeff.values.size(); i++)
-//                     std::cout << pstep->line.coeff.values[i] << " ";
-//                 std::cout << std::endl << "\th:" << pstep->line.h ;
-//                 std::cout << std::endl << "\td:" << pstep->line.d ;
-//                 std::cout << std::endl;
                 tmp_result.height = pstep->height * 1000;
                 tmp_result.width = pstep->depth * 1000;
                 tmp_result.v_height = pstep->line.h * 1000;
@@ -82,9 +67,6 @@ void DProcessor::resolve_result(Stair stair)
             pnext = pnext->pnext;
         }
 
-//         std::cout.precision(3);
-//         std::cout << "height:" << result.height << "\twidth:" << result.width
-//                 << "v_height:" << result.v_height << "\tv_depth:" << result.v_depth <<std::endl;
         if(tmp_result.height > 80 && tmp_result.height < 150)
             result.height = tmp_result.height;
 
@@ -96,67 +78,6 @@ void DProcessor::resolve_result(Stair stair)
 
         if(tmp_result.v_depth > 0 && tmp_result.v_depth < 600)
             result.v_depth = tmp_result.v_depth;
-
-//        if (result_count >= 20) result_count = 0;
-//
-//        if (first_result)
-//        {
-//            first_result = false;
-//            for (auto &i : result_buff)
-//                i = tmp_result;
-//
-//            result = tmp_result;
-//        } else
-//        {
-//            result_buff[result_count++] = tmp_result;
-//
-//            float tmp_h = 0, tmp_w = 0;
-//            int cnt_h = 0, cnt_w = 0;
-//            for (auto &i : result_buff)
-//            {
-//                if (i.height > 0)
-//                {
-//                    cnt_h++;
-//                    tmp_h += i.height;
-//                }
-//                if (i.width > 0)
-//                {
-//                    cnt_w++;
-//                    tmp_w += i.width;
-//                }
-//            }
-//            if (cnt_h > 0)
-//                result.height = tmp_h / cnt_h;
-//            if (cnt_w > 0)
-//                result.width = tmp_w / cnt_w;
-//
-//            ///////////////////////////////////////
-//            ///////////TODO: delete test
-//            //result.height = 100;
-//
-//            float tmp_vh = 0, tmp_vd = 0;
-//            int cnt_vh = 0, cnt_vd = 0;
-//            for (int i = 0; i < 5; i++)
-//            {
-//                int index = (i + result_count + 19) % 20;
-//
-//                if (!std::isnan(result_buff[index].v_height))
-//                {
-//                    tmp_vh += result_buff[index].v_height;
-//                    cnt_vh++;
-//                }
-//                if (!std::isnan(result_buff[index].v_depth))
-//                {
-//                    tmp_vd += result_buff[index].v_depth;
-//                    cnt_vd++;
-//                }
-//            }
-//
-//            if (cnt_vh > 0)
-//                result.v_height = tmp_vh / 5;
-//            if (cnt_vd > 0)
-//                result.v_depth = tmp_vd / 5;
-//        }
     }
 }
 
