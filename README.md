@@ -40,7 +40,7 @@ For more details about this algorithm, please refer to paper **Real-Time Stairs 
     ```sudo apt-get install cmake qt5-default qtcreator```
 1. finally, make and test!
     ```bash
-    git clone https://github.com/Psunshine/stair-perception.git
+    git clone https://github.com/Shiaoming/stair-perception.git
     mkdir build
     cd build
     cmake ..
