@@ -16,10 +16,6 @@ The meaning of **H**eight, **D**epth, **V_D**istance and **H_D**istance are show
 <img src="https://raw.githubusercontent.com/Psunshine/stair-perception/master/pic/stairmodel.png"  alt="stairmodel" align=center />
 </div>
 
-
-For more details about this algorithm, please refer to paper **Real-Time Stairs Geometric Parameters Estimation for Lower Limb Rehabilitation Exoskeleton** on *30th Chinese Control and Decision Conference (2018 CCDC)*.
-
-
 # Dependencies
 
 * [libfreenect2](https://github.com/OpenKinect/libfreenect2)
@@ -46,3 +42,16 @@ For more details about this algorithm, please refer to paper **Real-Time Stairs 
     cmake ..
     make -j4
     ```
+
+For more details about this algorithm, please refer to paper **Real-Time Stairs Geometric Parameters Estimation for Lower Limb Rehabilitation Exoskeleton** on *30th Chinese Control and Decision Conference (2018 CCDC)*.
+
+```
+@inproceedings{zhao2018real,
+	title={Real-Time Stairs Geometric Parameters Estimation for Lower Limb Rehabilitation Exoskeleton},
+	author={Zhao, Xiaoming and Chen, Weihai and Yan, Xing and Wang, Jianhua and Wu, Xingming},
+	booktitle={2018 Chinese Control And Decision Conference (CCDC)},
+	pages={5018--5023},
+	year={2018},
+	organization={IEEE}
+}
+```
