@@ -8,6 +8,10 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
 set(PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
+find_package(freenect2 REQUIRED)
+INCLUDE_DIRECTORIES(
+  ${freenect2_INCLUDE_DIR}
+)
 
 include_directories("${PROJECT_INCLUDE_DIR}")
 include_directories("${PROJECT_SOURCE_DIR}")
