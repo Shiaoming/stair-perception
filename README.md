@@ -1,5 +1,5 @@
 
-Upgraded [ROS_VERSION](https://github.com/Shiaoming/stair-perception-ROS)
+**Note**: Upgraded ros version stair-perception can be found [here](https://github.com/Shiaoming/stair-perception-ROS).
 
 # Introduction
 
