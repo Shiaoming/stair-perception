@@ -45,7 +45,7 @@ The meaning of **H**eight, **D**epth, **V_D**istance and **H_D**istance are show
     make -j4
     ```
 
-For more details about this algorithm, please refer to paper **Real-Time Stairs Geometric Parameters Estimation for Lower Limb Rehabilitation Exoskeleton** on *30th Chinese Control and Decision Conference (2018 CCDC)*.
+For more details about this algorithm, please refer:
 
 ```
 @article{zhao_adaptive_2019,
