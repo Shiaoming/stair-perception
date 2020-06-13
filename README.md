@@ -1,4 +1,6 @@
 
+Upgraded [ROS_VERSION](https://github.com/Shiaoming/stair-perception-ROS)
+
 # Introduction
 
 This is a stair perception kit programming with PCL and Qt which can model the stair and measure the stair's height, width, steps and so on. Tht input data can either be Kinect V2 video stream or saved images and point clouds from disk.
@@ -46,6 +48,20 @@ The meaning of **H**eight, **D**epth, **V_D**istance and **H_D**istance are show
 For more details about this algorithm, please refer to paper **Real-Time Stairs Geometric Parameters Estimation for Lower Limb Rehabilitation Exoskeleton** on *30th Chinese Control and Decision Conference (2018 CCDC)*.
 
 ```
+@article{zhao_adaptive_2019,
+	title = {An adaptive stair-ascending gait generation approach based on depth camera for lower limb exoskeleton},
+	volume = {90},
+	issn = {0034-6748},
+	url = {https://doi.org/10.1063/1.5109741 http://aip.scitation.org/doi/10.1063/1.5109741},
+	doi = {10/ggsxh2},
+	number = {12},
+	journal = {Review of Scientific Instruments},
+	author = {Zhao, Xiaoming and Chen, Wei-Hai and Li, Bing and Wu, Xingming and Wang, Jianhua},
+	month = dec,
+	year = {2019},
+	note = {Publisher: AIP Publishing, LLC},
+	pages = {125112}
+}
 @inproceedings{zhao2018real,
 	title={Real-Time Stairs Geometric Parameters Estimation for Lower Limb Rehabilitation Exoskeleton},
 	author={Zhao, Xiaoming and Chen, Weihai and Yan, Xing and Wang, Jianhua and Wu, Xingming},
