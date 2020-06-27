@@ -52,7 +52,7 @@ For more details about this algorithm, please refer:
 	title = {An adaptive stair-ascending gait generation approach based on depth camera for lower limb exoskeleton},
 	volume = {90},
 	issn = {0034-6748},
-	url = {https://doi.org/10.1063/1.5109741 http://aip.scitation.org/doi/10.1063/1.5109741},
+	url = {https://doi.org/10.1063/1.5109741},
 	doi = {10/ggsxh2},
 	number = {12},
 	journal = {Review of Scientific Instruments},
