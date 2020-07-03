@@ -624,7 +624,7 @@ void StairDetection::removeClosetPoints(const CloudType& cloud_in, const pcl::Po
     for(size_t i = 0; i < cloud_in.points.size(); i++)
     {
         point = cloud_in.points[i];
-        if( point.x * point.x + point.y * point.y + point.y * point.y > th * th)
+        if( point.x * point.x + point.y * point.y + point.z * point.z > th * th)
         {
             normal = normal_in.points[i];
             cloud_out.points.push_back(point);
