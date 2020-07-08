@@ -1311,9 +1311,9 @@ void StairDetection::computeVectorPlaneInfo(const std::vector<pcl::PointCloud<Po
         }
         
         // 4.middle point of principle vector
-        plane.pcenter.x = (points_max[0].x + points_max[0].x)/2;
-        plane.pcenter.y = (points_max[0].y + points_max[0].y)/2;
-        plane.pcenter.z = (points_max[0].z + points_max[0].z)/2;
+        plane.pcenter.x = (points_max[0].x + points_min[0].x)/2;
+        plane.pcenter.y = (points_max[0].y + points_min[0].y)/2;
+        plane.pcenter.z = (points_max[0].z + points_min[0].z)/2;
 
         memcpy(plane.min,min,sizeof(min));
         memcpy(plane.max,max,sizeof(max));
